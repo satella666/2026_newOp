@@ -1,4 +1,4 @@
-Dim fldr, shl, psCmd1p1, psCmd1p2, psCmd1p3, psCmd1p4
+Dim fldr, shl, psCmd1p1, psCmd1p2, psCmd1p3, psCmd1p4, zzCmd0, zzCmd1, zzCmd2, zzCmd3, zzCmd4, zzCmd5, zzCmd6, zzCmd7
 
 fldr = "C:\dados"
 Set fso = CreateObject("Scripting.FileSystemObject")
